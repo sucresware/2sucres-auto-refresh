@@ -4,12 +4,11 @@
 // @updateURL    https://github.com/sucresware/2sucres-auto-refresh/raw/master/2sucres-auto-refresh.user.js
 // @downloadURL  https://github.com/sucresware/2sucres-auto-refresh/raw/master/2sucres-auto-refresh.user.js
 // @author		 SucresWare
-// @version      1.0
+// @version      1.1
 // @match        https://2sucres.org/*
 // ==/UserScript==
 
 var refreshRate = 100;
-var updateCountInterval = null;
 var requestsCount = 0;
 var refreshInterval = null;
 var refreshElement = null;
@@ -41,13 +40,6 @@ var findRefreshButton = function() {
     return null;
 }
 
-var updateCount = function() {
-    // Update count
-    document
-        .getElementById(instanceId + '-text')
-        .innerHTML = 'Auto-Refrech (' + requestsCount + ')';
-}
-
 var refresh = function() {
     // Search for the element
     if (!refreshElement || !document.body.contains(refreshElement)) {
@@ -67,10 +59,8 @@ var toggle = function(e) {
     if (e.target.checked) {
         requestsCount = 0;
         refreshInterval = setInterval(refresh, refreshRate);
-        updateCountInterval = setInterval(updateCount, 50);
     } else {
         clearInterval(refreshInterval);
-        clearInterval(updateCountInterval);
     }
 
     return;
