@@ -30,3 +30,13 @@ Ajoutez le script à votre navigateur. Le script est téléchargeable [ici](http
 Vous pouvez aussi installer le script en cliquant sur l'icône TamperMonkey dans votre navigateur, puis en sélectionnant **Create a new script...**. Copiez le contenu du script dans la page qui vient de s'ouvrir et enregistrez-le.
 
 Pour en savoir plus, vous pouvez vous renseigner dans la [FÀQ de TamperMonkey](https://www.tampermonkey.net/faq.php#Q102).
+
+# Paramétrage
+
+L'intervalle de rechargement est réglé par défaut à 100ms. Si besoin, pour voir apparaître encore plus rapidement les topics, vous pouvez directement la modifier dans le script, ligne 11 :
+
+```js
+// 2sucres-auto-refresh.user.js#L11
+
+var refreshRate = 100;
+```
