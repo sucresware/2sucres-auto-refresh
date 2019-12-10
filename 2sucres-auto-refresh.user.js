@@ -85,5 +85,5 @@ var inject = function() {
     'use strict';
 
     instanceId = uniqid();
-    inject();
+    setTimeout(function(){ inject(); }, 1000);
 })();
