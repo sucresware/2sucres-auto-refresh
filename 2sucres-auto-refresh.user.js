@@ -4,7 +4,7 @@
 // @updateURL    https://github.com/sucresware/2sucres-auto-refresh/raw/master/2sucres-auto-refresh.user.js
 // @downloadURL  https://github.com/sucresware/2sucres-auto-refresh/raw/master/2sucres-auto-refresh.user.js
 // @author		 SucresWare
-// @version      1.1
+// @version      1.2
 // @match        https://2sucres.org/*
 // ==/UserScript==
 
@@ -85,5 +85,5 @@ var inject = function() {
     'use strict';
 
     instanceId = uniqid();
-    inject();
+    setTimeout(function(){ inject(); }, 1000);
 })();
