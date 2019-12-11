@@ -4,11 +4,11 @@
 // @updateURL    https://github.com/sucresware/2sucres-auto-refresh/raw/master/2sucres-auto-refresh.user.js
 // @downloadURL  https://github.com/sucresware/2sucres-auto-refresh/raw/master/2sucres-auto-refresh.user.js
 // @author		 SucresWare
-// @version      1.2
+// @version      1.3
 // @match        https://2sucres.org/*
 // ==/UserScript==
 
-var refreshRate = 100;
+var refreshRate = 1000;
 var requestsCount = 0;
 var refreshInterval = null;
 var refreshElement = null;
